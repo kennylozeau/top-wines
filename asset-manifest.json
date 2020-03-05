@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/top-wines/static/css/main.3b0da18b.chunk.css",
-    "main.js": "/top-wines/static/js/main.e254df87.chunk.js",
-    "main.js.map": "/top-wines/static/js/main.e254df87.chunk.js.map",
+    "main.js": "/top-wines/static/js/main.42fb9dd3.chunk.js",
+    "main.js.map": "/top-wines/static/js/main.42fb9dd3.chunk.js.map",
     "runtime-main.js": "/top-wines/static/js/runtime-main.817ed291.js",
     "runtime-main.js.map": "/top-wines/static/js/runtime-main.817ed291.js.map",
-    "static/js/2.9db076f3.chunk.js": "/top-wines/static/js/2.9db076f3.chunk.js",
-    "static/js/2.9db076f3.chunk.js.map": "/top-wines/static/js/2.9db076f3.chunk.js.map",
+    "static/js/2.e82fc311.chunk.js": "/top-wines/static/js/2.e82fc311.chunk.js",
+    "static/js/2.e82fc311.chunk.js.map": "/top-wines/static/js/2.e82fc311.chunk.js.map",
     "index.html": "/top-wines/index.html",
-    "precache-manifest.22231ef327de2c74906fbf71db56dc34.js": "/top-wines/precache-manifest.22231ef327de2c74906fbf71db56dc34.js",
+    "precache-manifest.4a15b87e4b1778e55b4119a2a5208d27.js": "/top-wines/precache-manifest.4a15b87e4b1778e55b4119a2a5208d27.js",
     "service-worker.js": "/top-wines/service-worker.js",
     "static/css/main.3b0da18b.chunk.css.map": "/top-wines/static/css/main.3b0da18b.chunk.css.map",
-    "static/js/2.9db076f3.chunk.js.LICENSE.txt": "/top-wines/static/js/2.9db076f3.chunk.js.LICENSE.txt"
+    "static/js/2.e82fc311.chunk.js.LICENSE.txt": "/top-wines/static/js/2.e82fc311.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.817ed291.js",
-    "static/js/2.9db076f3.chunk.js",
+    "static/js/2.e82fc311.chunk.js",
     "static/css/main.3b0da18b.chunk.css",
-    "static/js/main.e254df87.chunk.js"
+    "static/js/main.42fb9dd3.chunk.js"
   ]
 }
