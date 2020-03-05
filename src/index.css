@@ -8,6 +8,7 @@ body {
   cursor: default;
   margin: 20px;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .wine-list td {
@@ -34,9 +35,11 @@ body {
 
 .tasting-notes {
   position: sticky;
+  box-sizing: border-box;
   top: 100px;
   height: fit-content;
   width: 30%;
+  min-width: 200px;
   border: 1px solid lightgray;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   border-radius: 2px;
