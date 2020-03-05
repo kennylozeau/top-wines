@@ -1,5 +1,6 @@
 body {
-  font-family: 'Ariel', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
   letter-spacing: 0.5px;
 }
 
@@ -12,12 +13,12 @@ body {
 }
 
 .wine-list td {
-  padding: 5px;
+  padding: 15px;
   border-bottom: 1px solid #dddddd;
 }
 
 .wine-list tr:hover {
-  background-color: rgb(161, 217, 250);
+  background-color: rgb(206, 234, 250);
 }
 
 .wine-list tr:first-child {
@@ -36,7 +37,7 @@ body {
 .tasting-notes {
   position: sticky;
   box-sizing: border-box;
-  top: 100px;
+  top: 200px;
   height: fit-content;
   width: 30%;
   min-width: 200px;
@@ -52,4 +53,15 @@ body {
   font-size: 16px;
   font-weight: bold;
   text-decoration: underline;
+}
+
+.header {
+  margin: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }

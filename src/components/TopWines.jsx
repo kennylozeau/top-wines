@@ -49,14 +49,20 @@ class TopWines extends React.Component {
 
   render () {
     return (
-      <div className="top-wines">
-        <WineIndex wines={this.state.wines} selectWine={this.selectWine} />
-        {this.state.selectedWineId &&
-          <TastingNotes
-            id={this.state.selectedWineId}
-            loading={this.state.loading}
-            notes={this.state.notes} />}
-      </div>
+      <>
+        <div className="header">
+          <h1>Top 100 Wines</h1>
+          <h3>Below and to the left is a 2018 list of the top 100 wines, listed by ranking. Hovering over a wine in the list will display relevant tasting notes.</h3>
+        </div>
+        <div className="top-wines">
+          <WineIndex wines={this.state.wines} selectWine={this.selectWine} />
+          {this.state.selectedWineId &&
+            <TastingNotes
+              id={this.state.selectedWineId}
+              loading={this.state.loading}
+              notes={this.state.notes} />}
+        </div>
+      </>
     )
   }
 }
