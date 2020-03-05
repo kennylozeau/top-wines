@@ -30,9 +30,9 @@ class TastingNotes extends React.Component {
 
   render() {
     if (this.props.loading) {
-      return <h3>Loading tasting notes</h3>
+      return <div className="tasting-notes">Loading tasting notes</div>
     } else {
-      return <div>{this.props.notes}</div>
+      return <div className="tasting-notes">{this.props.notes}</div>
     };
   }
 }

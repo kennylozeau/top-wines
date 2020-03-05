@@ -33,3 +33,12 @@ code {
 .top-wines {
   display: flex;
 }
+
+.tasting-notes {
+  position: sticky;
+  top: 100px;
+  height: 200px;
+  /* overflow: auto; */
+  width: 200px;
+  /* border: 1px solid black; */
+}

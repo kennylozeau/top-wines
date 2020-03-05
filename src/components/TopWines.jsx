@@ -60,13 +60,15 @@ class TopWines extends React.Component {
       return (
         <div className="top-wines">
           <WineIndex wines={this.state.wines} selectWine={this.selectWine} />
-          <div id="notes">
-            <TastingNotes id={this.state.selectedWineId} loading={this.state.loading} notes={this.state.notes}/>
-          </div>
+          <TastingNotes id={this.state.selectedWineId} loading={this.state.loading} notes={this.state.notes} />
         </div>
       )
     } else {
-      return <WineIndex wines={this.state.wines} selectWine={this.selectWine}/>
+      return (
+        <div className="top-wines">
+          <WineIndex wines={this.state.wines} selectWine={this.selectWine} />
+        </div>
+      )
     }
   }
 }
