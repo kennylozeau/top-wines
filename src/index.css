@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.wine-list {
+  width: 60%;
+  cursor: default;
+}
+
+.wine-list td {
+  padding: 5px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.wine-list tr:hover {
+  background-color: rgb(161, 217, 250);
+}
+
+.wine-list tr:first-child:hover {
+  background-color: white;
+}
+
+.top-wines {
+  display: flex;
+}

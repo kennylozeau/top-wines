@@ -3,13 +3,23 @@ import WineIndexItem from './WineIndexItem';
 
 function WineIndex(props) {
   const wineList = props.wines.map(wine => {
-    return <WineIndexItem key={wine.id} wine={wine} />
+    return <WineIndexItem key={wine.id} wine={wine} selectWine={props.selectWine}/>
   });
 
   return (
-    <ul>
-      {wineList}
-    </ul>
+    <table className="wine-list">
+      <tbody>
+        <tr>
+          <td>Score</td>
+          <td>Winery</td>
+          <td>Wine</td>
+          <td>Vintage</td>
+          <td>Color</td>
+          <td>Region</td>
+        </tr>
+        {wineList}
+      </tbody>
+    </table>
   )
 }
 
