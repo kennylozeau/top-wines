@@ -17,17 +17,23 @@ body {
   border-bottom: 1px solid #dddddd;
 }
 
-.wine-list tr:hover {
-  background-color: rgb(206, 234, 250);
+.wine-list tr:nth-child(even) {
+  background-color: #fde8e8;
 }
+
 
 .wine-list tr:first-child {
   font-size: 16px;
   font-weight: bold;
+  border-bottom: 2px solid #dddddd;
 }
 
 .wine-list tr:first-child:hover {
   background-color: white;
+}
+
+.wine-list tr:hover {
+  background-color: rgb(206, 234, 250);
 }
 
 .top-wines {
