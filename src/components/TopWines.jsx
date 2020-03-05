@@ -48,20 +48,16 @@ class TopWines extends React.Component {
   }
 
   render () {
-    if (this.state.selectedWineId) {
-      return (
-        <div className="top-wines">
-          <WineIndex wines={this.state.wines} selectWine={this.selectWine} />
-          <TastingNotes id={this.state.selectedWineId} loading={this.state.loading} notes={this.state.notes} />
-        </div>
-      )
-    } else {
-      return (
-        <div className="top-wines">
-          <WineIndex wines={this.state.wines} selectWine={this.selectWine} />
-        </div>
-      )
-    }
+    return (
+      <div className="top-wines">
+        <WineIndex wines={this.state.wines} selectWine={this.selectWine} />
+        {this.state.selectedWineId &&
+          <TastingNotes
+            id={this.state.selectedWineId}
+            loading={this.state.loading}
+            notes={this.state.notes} />}
+      </div>
+    )
   }
 }
 
