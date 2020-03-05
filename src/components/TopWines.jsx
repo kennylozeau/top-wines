@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../index.css';
 import WineIndex from './WineIndex';
 import TastingNotes from './TastingNotes';
 import debounce from '../util/debounce';
