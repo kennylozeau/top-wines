@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "be41c3413c32c2816076fc2900502c53",
+    "revision": "d3012120fac72b2780d5fa7f25623b94",
     "url": "/top-wines/index.html"
   },
   {
-    "revision": "75cff72f4b3fd338f13f",
-    "url": "/top-wines/static/css/main.1f2b37e0.chunk.css"
+    "revision": "413175969f73b267efcb",
+    "url": "/top-wines/static/css/main.43da5aa6.chunk.css"
   },
   {
     "revision": "e61fae664d92b08ca1c9",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/top-wines/static/js/2.9db076f3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "75cff72f4b3fd338f13f",
+    "revision": "413175969f73b267efcb",
     "url": "/top-wines/static/js/main.efec3bfd.chunk.js"
   },
   {
