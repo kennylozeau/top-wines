@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/top-wines/static/css/main.6ee6be9d.chunk.css",
-    "main.js": "/top-wines/static/js/main.efec3bfd.chunk.js",
-    "main.js.map": "/top-wines/static/js/main.efec3bfd.chunk.js.map",
+    "main.js": "/top-wines/static/js/main.515afe92.chunk.js",
+    "main.js.map": "/top-wines/static/js/main.515afe92.chunk.js.map",
     "runtime-main.js": "/top-wines/static/js/runtime-main.817ed291.js",
     "runtime-main.js.map": "/top-wines/static/js/runtime-main.817ed291.js.map",
     "static/js/2.9db076f3.chunk.js": "/top-wines/static/js/2.9db076f3.chunk.js",
     "static/js/2.9db076f3.chunk.js.map": "/top-wines/static/js/2.9db076f3.chunk.js.map",
     "index.html": "/top-wines/index.html",
-    "precache-manifest.731512f3203d3a466d34071c952fc34a.js": "/top-wines/precache-manifest.731512f3203d3a466d34071c952fc34a.js",
+    "precache-manifest.9d31286c9e9defc0893dabb4190d886c.js": "/top-wines/precache-manifest.9d31286c9e9defc0893dabb4190d886c.js",
     "service-worker.js": "/top-wines/service-worker.js",
     "static/css/main.6ee6be9d.chunk.css.map": "/top-wines/static/css/main.6ee6be9d.chunk.css.map",
     "static/js/2.9db076f3.chunk.js.LICENSE.txt": "/top-wines/static/js/2.9db076f3.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.817ed291.js",
     "static/js/2.9db076f3.chunk.js",
     "static/css/main.6ee6be9d.chunk.css",
-    "static/js/main.efec3bfd.chunk.js"
+    "static/js/main.515afe92.chunk.js"
   ]
 }
