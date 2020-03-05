@@ -4,7 +4,7 @@
 
 Top 100 Wines is a single-app web app built using React.
 
-# Technologies Used
+## Technologies Used
 * React
 * HTML
 * CSS
