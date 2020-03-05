@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import axios from 'axios';
 import WineIndex from './WineIndex';
 import TastingNotes from './TastingNotes';
@@ -16,16 +15,11 @@ class TopWines extends React.Component {
       notes: ''
     };
 
-    this.selectWine = this.selectWine.bind(this).debounce(500);
+    // this.selectWine = this.selectWine.bind(this).debounce(500);
+    this.selectWine = debounce(this.selectWine.bind(this), 500);
   }
 
   selectWine(selectedWineId) {
-    // this.setState({selectedWineId});
-
-    // if (selectedWineId === null) {
-    //   ReactDOM.unmountComponentAtNode(document.getElementById('notes'));
-    // }
-
     this.setState({
       loading: true,
       selectedWineId
@@ -75,13 +69,26 @@ class TopWines extends React.Component {
 
 export default TopWines;
 
-Function.prototype.debounce = function (interval) {
+// Function.prototype.debounce = function (interval) {
+//   let timeout;
+
+//   return (...args) => {
+//     const fnCall = () => {
+//       timeout = null;
+//       this(...args);
+//     }
+//     clearTimeout(timeout);
+//     timeout = setTimeout(fnCall, interval);
+//   }
+// }
+
+function debounce (fn, interval) {
   let timeout;
 
   return (...args) => {
     const fnCall = () => {
       timeout = null;
-      this(...args);
+      fn(...args)
     }
     clearTimeout(timeout);
     timeout = setTimeout(fnCall, interval);
