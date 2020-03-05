@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/top-wines/static/css/main.1f2b37e0.chunk.css",
+    "main.js": "/top-wines/static/js/main.acb9c670.chunk.js",
+    "main.js.map": "/top-wines/static/js/main.acb9c670.chunk.js.map",
+    "runtime-main.js": "/top-wines/static/js/runtime-main.817ed291.js",
+    "runtime-main.js.map": "/top-wines/static/js/runtime-main.817ed291.js.map",
+    "static/js/2.9db076f3.chunk.js": "/top-wines/static/js/2.9db076f3.chunk.js",
+    "static/js/2.9db076f3.chunk.js.map": "/top-wines/static/js/2.9db076f3.chunk.js.map",
+    "index.html": "/top-wines/index.html",
+    "precache-manifest.28a202d777386bb20aea8b9962171279.js": "/top-wines/precache-manifest.28a202d777386bb20aea8b9962171279.js",
+    "service-worker.js": "/top-wines/service-worker.js",
+    "static/css/main.1f2b37e0.chunk.css.map": "/top-wines/static/css/main.1f2b37e0.chunk.css.map",
+    "static/js/2.9db076f3.chunk.js.LICENSE.txt": "/top-wines/static/js/2.9db076f3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.817ed291.js",
+    "static/js/2.9db076f3.chunk.js",
+    "static/css/main.1f2b37e0.chunk.css",
+    "static/js/main.acb9c670.chunk.js"
+  ]
+}
