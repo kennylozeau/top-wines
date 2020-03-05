@@ -1,10 +1,6 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Ariel', sans-serif;
   letter-spacing: 0.5px;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
 }
 
 .wine-list {
@@ -41,7 +37,8 @@ body {
   top: 100px;
   height: fit-content;
   width: 30%;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   border-radius: 2px;
   margin: 20px;
   padding: 10px;
