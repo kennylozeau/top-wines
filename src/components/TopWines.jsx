@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import WineIndex from './WineIndex';
 import TastingNotes from './TastingNotes';
+import debounce from '../util/debounce';
 
 class TopWines extends React.Component {
   constructor(props) {
@@ -15,7 +16,6 @@ class TopWines extends React.Component {
       notes: ''
     };
 
-    // this.selectWine = this.selectWine.bind(this).debounce(500);
     this.selectWine = debounce(this.selectWine.bind(this), 500);
   }
 
@@ -30,7 +30,6 @@ class TopWines extends React.Component {
         method: 'get',
         url: `https://cors-anywhere.herokuapp.com/https://top-100-example.s3.amazonaws.com/${selectedWineId}.json`
       }).then(response => {
-        // debugger
         this.setState({
           loading: false,
           notes: response.data.note
@@ -49,7 +48,6 @@ class TopWines extends React.Component {
   }
 
   render () {
-    // debugger
     if (this.state.selectedWineId) {
       return (
         <div className="top-wines">
@@ -68,29 +66,3 @@ class TopWines extends React.Component {
 }
 
 export default TopWines;
-
-// Function.prototype.debounce = function (interval) {
-//   let timeout;
-
-//   return (...args) => {
-//     const fnCall = () => {
-//       timeout = null;
-//       this(...args);
-//     }
-//     clearTimeout(timeout);
-//     timeout = setTimeout(fnCall, interval);
-//   }
-// }
-
-function debounce (fn, interval) {
-  let timeout;
-
-  return (...args) => {
-    const fnCall = () => {
-      timeout = null;
-      fn(...args)
-    }
-    clearTimeout(timeout);
-    timeout = setTimeout(fnCall, interval);
-  }
-}
