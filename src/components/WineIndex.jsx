@@ -3,7 +3,7 @@ import WineIndexItem from './WineIndexItem';
 
 function WineIndex(props) {
   const wineList = props.wines.map(wine => {
-    return <WineIndexItem key={wine.id} wine={wine} selectWine={props.selectWine}/>
+    return <WineIndexItem key={wine.id} wine={wine} selectWine={props.selectWine} />
   });
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import '../index.css';
+import '../top_wines.css';
 import WineIndex from './WineIndex';
 import TastingNotes from './TastingNotes';
 import debounce from '../util/debounce';
@@ -12,7 +12,6 @@ class TopWines extends React.Component {
     this.state = {
       wines: [],
       selectedWineId: null,
-
       loading: false,
       notes: ''
     };
@@ -48,12 +47,13 @@ class TopWines extends React.Component {
       });
   }
 
-  render () {
+  render() {
     return (
       <>
         <div className="header">
           <h1>Top 100 Wines</h1>
-          <h3>Below and to the left is a 2018 list of the top 100 wines, listed by ranking. Hovering over a wine in the list will display relevant tasting notes.</h3>
+          <h3>Below and to the left is a 2018 list of the top 100 wines, listed by ranking.
+            Hovering over a wine in the list will display relevant tasting notes.</h3>
         </div>
         <div className="top-wines">
           <WineIndex wines={this.state.wines} selectWine={this.selectWine} />
