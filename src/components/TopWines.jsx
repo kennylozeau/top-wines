@@ -16,7 +16,20 @@ class TopWines extends React.Component {
       notes: ''
     };
 
-    this.selectWine = debounce(this.selectWine.bind(this), 500);
+    this.selectWine = this.selectWine.bind(this);
+    this.fetchNotes = debounce(this.fetchNotes.bind(this), 500);
+  }
+
+  fetchNotes(wineId) {
+    axios({
+      method: 'get',
+      url: `https://cors-anywhere.herokuapp.com/https://top-100-example.s3.amazonaws.com/${wineId}.json`
+    }).then(response => {
+      this.setState({
+        loading: false,
+        notes: response.data.note
+      })
+    });
   }
 
   selectWine(selectedWineId) {
@@ -26,15 +39,7 @@ class TopWines extends React.Component {
     });
 
     if (selectedWineId) {
-      axios({
-        method: 'get',
-        url: `https://cors-anywhere.herokuapp.com/https://top-100-example.s3.amazonaws.com/${selectedWineId}.json`
-      }).then(response => {
-        this.setState({
-          loading: false,
-          notes: response.data.note
-        })
-      });
+      this.fetchNotes(selectedWineId);
     };
   }
 

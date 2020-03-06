@@ -70,3 +70,7 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+.column-headers td {
+  padding-bottom: 5px;
+}

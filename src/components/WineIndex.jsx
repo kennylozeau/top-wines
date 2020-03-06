@@ -9,7 +9,7 @@ function WineIndex(props) {
   return (
     <table className="wine-list">
       <tbody>
-        <tr>
+        <tr className="column-headers">
           <td>Score</td>
           <td>Winery</td>
           <td>Wine</td>

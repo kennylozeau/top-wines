@@ -90,31 +90,69 @@ function WineIndexItem(props) {
 }
 ```
 
-Once invoked, the `selectWine` method from the `TopWines` component first stores the `selectedWineId` in the component's state, while also setting `loading` to `true`. If the method was invoked with a wine id, then an Axios request is sent to fetch the associated tasting notes, resulting in the tasting notes and updated loading status being asyncronously set to the component state:
+Once invoked, the `selectWine` method from the `TopWines` component first stores the `selectedWineId` in the component's state, while also setting `loading` to `true`. If the method was invoked with a wine id, then the `fetchNotes` method is invoked, in which an Axios request is sent to fetch the associated tasting notes, resulting in the tasting notes and updated loading status being asyncronously set to the component state:
 
 ```javascript
 // /src/components/TopWines.jsx
 selectWine(selectedWineId) {
-    this.setState({
-      loading: true,
-      selectedWineId
-    });
+  this.setState({
+    loading: true,
+    selectedWineId
+  });
 
-    if (selectedWineId) {
-      axios({
-        method: 'get',
-        url: `https://cors-anywhere.herokuapp.com/https://top-100-example.s3.amazonaws.com/${selectedWineId}.json`
-      }).then(response => {
-        this.setState({
-          loading: false,
-          notes: response.data.note
-        })
-      });
-    };
-  }
+  if (selectedWineId) {
+    this.fetchNotes(selectedWineId);
+  };
+}
+
+fetchWine(wineId) {
+  axios({
+    method: 'get',
+    url: `https://cors-anywhere.herokuapp.com/https://top-100-example.s3.amazonaws.com/${wineId}.json`
+  }).then(response => {
+    this.setState({
+      loading: false,
+      notes: response.data.note
+    })
+  });
+}
 ```
 
 With all aspects of the `TopWines` component's state now properly updated, the tasting notes can be conditionally rendered.
+
+One important aspect of the `fetchNotes` method is that it has been debounced in the constructor for the `TopWines` component, limiting the rate at which requests can be sent:
+
+```javascript
+// /src/util/debounce.js
+function debounce(fn, interval) {
+  let timeout;
+
+  return (...args) => {
+    const fnCall = () => {
+      timeout = null;
+      fn(...args)
+    }
+    clearTimeout(timeout);
+    timeout = setTimeout(fnCall, interval);
+  }
+}
+```
+```javascript
+// /src/component/TopWines.jsx
+constructor(props) {
+  super(props);
+
+  this.state = {
+    wines: [],
+    selectedWineId: null,
+    loading: false,
+    notes: ''
+  };
+
+  this.selectWine = this.selectWine.bind(this);
+  this.fetchNotes = debounce(this.fetchNotes.bind(this), 500);
+}
+```
 
 ## Technologies Used
 * React
